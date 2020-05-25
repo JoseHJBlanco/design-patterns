@@ -138,6 +138,7 @@ class Agent(StoppableThread):
     """
     Base class for a resource monitoring agent.
     """
+
     def __init__(self, *, pid=None, sleep=1):
         super().__init__()
         self._sleep = sleep
@@ -174,6 +175,7 @@ class Agent(StoppableThread):
         It should return an object that implements the interface defined by `MetricsGetter`.
         """
         pass
+
 
 class StreamAgent(Agent):
     """
